@@ -1,0 +1,8 @@
+# 统一文本文件换行（仓库内用 LF），消除 Windows 下 CRLF 警告
+* text=auto eol=lf
+
+# 二进制文件不做换行转换
+*.parquet binary
+*.png binary
+*.jpg binary
+*.xlsx binary

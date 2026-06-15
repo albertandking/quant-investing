@@ -1,0 +1,32 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+*.egg-info/
+.ipynb_checkpoints/
+.pytest_cache/
+.ruff_cache/
+
+# uv
+# 注意：uv.lock 应当提交，用于复现环境，不要忽略
+
+# 数据：原始/下载的数据不入库，内置示例数据(processed)入库
+data/raw/
+data/external/
+*.tmp
+
+# MkDocs 构建产物
+site/
+
+# 导出的全书 PDF（体积大，按需用 scripts/build_pdf.py 重新生成）
+*.pdf
+
+# Notebook 手动导出的中间产物（由 scripts/export_notebooks.py 生成）
+book/_generated/
+book/**/_generated/
+
+# 操作系统/编辑器
+.DS_Store
+.idea/
+.vscode/
+*.swp

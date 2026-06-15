@@ -1,0 +1,24 @@
+# Binder（mybinder.org）运行环境：锁定 Python 3.11，从 conda-forge 装全栈。
+# 覆盖第 1-15、17-18 章基础栈；第16章主线回测框架 akquant、第19章 lightgbm
+# 通过下方 pip 段安装；过重的对比框架（backtrader/vectorbt）可在 notebook 内
+# 临时 `!pip install ...`。
+name: qfin
+channels:
+  - conda-forge
+dependencies:
+  - python=3.11
+  - pip
+  - numpy>=1.26
+  - pandas>=2.2
+  - scipy>=1.13
+  - matplotlib-base>=3.8
+  - seaborn>=0.13
+  - statsmodels>=0.14
+  - scikit-learn>=1.5
+  - pyarrow>=16.0
+  - openpyxl>=3.1
+  - tqdm>=4.66
+  - lightgbm>=4.3
+  - pip:
+      - akshare>=1.14
+      - akquant>=0.2

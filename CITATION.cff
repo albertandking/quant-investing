@@ -1,0 +1,21 @@
+cff-version: 1.2.0
+message: 如果本书对你的学习、研究或教学有帮助，请按如下方式引用。
+title: 量化投资（Quantitative Investing）
+abstract: 面向中国本科生与研究生的开源量化投资实战教程，零基础起步，含可在线运行的 Jupyter Notebook。
+type: book
+authors:
+  - given-names: Albert
+    alias: albertandking
+version: 0.1.0
+date-released: "2026-06-15"
+license: CC-BY-4.0
+url: https://albertandking.github.io/quant-investing/
+repository-code: https://github.com/albertandking/quant-investing
+keywords:
+  - quantitative investing
+  - quantitative finance
+  - algorithmic trading
+  - backtesting
+  - factor investing
+  - A-share
+  - textbook

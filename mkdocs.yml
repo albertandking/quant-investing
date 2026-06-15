@@ -1,0 +1,98 @@
+site_name: 量化投资
+site_description: 面向中国本科生与研究生的开源量化投资实战教程（零基础起步，A 股实战）
+site_author: ""
+site_url: https://albertandking.github.io/quant-investing/
+repo_url: https://github.com/albertandking/quant-investing
+repo_name: albertandking/quant-investing
+edit_uri: edit/main/book/
+docs_dir: book
+site_dir: site
+
+theme:
+  name: material
+  language: zh
+  features:
+    - navigation.sections
+    - navigation.top
+    - toc.follow
+    - content.code.copy
+    - content.code.annotate
+    - content.tabs.link        # 同页多组标签页联动切换（多数据源/多框架对比）
+  palette:
+    - scheme: default
+      primary: indigo
+      toggle:
+        icon: material/weather-night
+        name: 切换到夜间模式
+    - scheme: slate
+      primary: indigo
+      toggle:
+        icon: material/weather-sunny
+        name: 切换到日间模式
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - tables
+  - footnotes
+  - attr_list
+  - md_in_html
+  - toc:
+      permalink: true
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.superfences
+  - pymdownx.inlinehilite
+  - pymdownx.arithmatex:    # 数学公式
+      generic: true
+  - pymdownx.tabbed:        # 多数据源 / 多回测框架并排对比的核心
+      alternate_style: true
+
+extra_javascript:
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+
+plugins:
+  - search
+  - print-site:
+      add_to_navigation: false       # 不在导航里显示打印页
+      print_page_title: 量化投资（全书打印版）
+      add_print_site_banner: false
+      enumerate_headings: false       # 标题已自带 X.Y 编号
+      enumerate_figures: false        # 图已自带「图 X-Y」编号
+      add_cover_page: true
+
+nav:
+  - 首页: index.md
+  - 前言: preface.md
+  - 第一部分·入门与基础:
+      - 第1章 量化投资导论: part1/01-introduction.md
+      - 第2章 Python 快速上手: part1/02-python-basics.md
+      - 第3章 NumPy 与 Pandas: part1/03-numpy-pandas.md
+      - 第4章 金融与统计基础: part1/04-finance-stats.md
+  - 第二部分·数据:
+      - 第5章 行情数据获取: part2/05-data-acquisition.md
+      - 第6章 财务与另类数据: part2/06-fundamental-alt-data.md
+      - 第7章 数据预处理与特征准备: part2/07-preprocessing.md
+  - 第三部分·信号与因子:
+      - 第8章 技术指标与交易信号: part3/08-technical-signals.md
+      - 第9章 单因子构建与检验: part3/09-single-factor.md
+      - 第10章 多因子模型: part3/10-multi-factor.md
+  - 第四部分·策略:
+      - 第11章 趋势跟踪与均值回归: part4/11-trend-meanrev.md
+      - 第12章 配对交易与统计套利: part4/12-pairs-trading.md
+      - 第13章 多因子选股策略: part4/13-stock-selection.md
+      - 第14章 资产配置与组合构建: part4/14-asset-allocation.md
+  - 第五部分·回测:
+      - 第15章 回测原理与陷阱: part5/15-backtest-pitfalls.md
+      - 第16章 事件驱动回测（akquant）: part5/16-event-driven-backtest.md
+      - 第17章 绩效评估与归因: part5/17-performance.md
+  - 第六部分·风险与实盘:
+      - 第18章 风险管理与仓位: part6/18-risk-management.md
+      - 第19章 机器学习在量化中的应用: part6/19-ml-quant.md
+      - 第20章 从回测到实盘: part6/20-live-trading.md
+  - 附录:
+      - 附录A 环境与工具链配置: appendix/a-setup.md
+      - 附录B 数学与概率回顾: appendix/b-math-review.md
+      - 附录C 数据源与框架对比速查: appendix/c-data-framework.md
+      - 附录D 术语与符号表: appendix/d-glossary.md
+      - 附录E 量化资源清单: appendix/e-resources.md
